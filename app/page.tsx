@@ -12,6 +12,8 @@ export default function Home() {
   };
 
   const envColorChoice = process.env.NEXT_PUBLIC_DEPLOYMENT_COLOR as ColorChoice;
+
+  console.log(`Color Choice from environment variable is ${process.env.NEXT_PUBLIC_DEPLOYMENT_COLOR || 'NOT DEFINED OR FALSY'}`)
   
   const headingColor: string =
     envColorChoice && colors[envColorChoice] ? colors[envColorChoice] : colors.black;
