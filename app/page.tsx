@@ -1,4 +1,4 @@
-import Image from 'next/image';
+export const dynamic = 'force-dynamic';
 
 type ColorChoice = 'blue' | 'green' | 'brown' | 'orange' | 'black';
 
@@ -11,11 +11,11 @@ export default function Home() {
     black: '#000000',
   };
 
-  const envColorChoice = process.env.NEXT_PUBLIC_DEPLOYMENT_COLOR as ColorChoice;
+  const envColorChoice = process.env.DEPLOYMENT_COLOR as ColorChoice;
 
   console.log(
     `Color Choice from environment variable is ${
-      process.env.NEXT_PUBLIC_DEPLOYMENT_COLOR || 'NOT DEFINED OR FALSY'
+      process.env.DEPLOYMENT_COLOR || 'NOT DEFINED OR FALSY'
     }`
   );
 
